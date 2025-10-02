@@ -15,7 +15,7 @@ body {
 }
 
 a {
-  @apply transition-colors;
+  @apply transition-colors duration-300;
 }
 
 a:hover {
@@ -32,19 +32,19 @@ section {
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary;
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary;
   }
 
   .btn-primary {
-    @apply bg-primary text-white shadow-md hover:bg-primary/85;
+    @apply bg-gradient-gold text-white shadow-xl-warm hover:shadow-glow hover:scale-105 active:scale-95;
   }
 
   .btn-secondary {
-    @apply border border-secondary text-secondary hover:bg-accent/70;
+    @apply border-2 border-secondary text-secondary hover:bg-accent/70 hover:border-primary hover:text-primary;
   }
 
   .card {
-    @apply rounded-2xl bg-white p-6 shadow-card;
+    @apply rounded-2xl bg-white p-6 shadow-card transition-all duration-300 hover:shadow-card-hover;
   }
 
   .muted-section {
@@ -58,7 +58,12 @@ section {
 
 input,
 textarea {
-  @apply w-full rounded-lg border border-accent/70 bg-white px-4 py-2 text-sm shadow-sm transition focus:border-secondary focus:outline-none focus:ring-2 focus:ring-secondary/30;
+  @apply w-full rounded-lg border border-accent/70 bg-white px-4 py-2 text-sm shadow-sm transition-all duration-300 focus:border-secondary focus:outline-none focus:ring-2 focus:ring-secondary/30 focus:shadow-md;
+}
+
+input:hover,
+textarea:hover {
+  @apply border-primary/50;
 }
 
 label {
@@ -68,4 +73,26 @@ label {
 ::selection {
   background-color: #f5d48f;
   color: #2c1a0b;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-surface;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/30 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary/50;
+}
+
+/* Smooth transitions for animations */
+* {
+  @apply transition-colors duration-200;
 }
