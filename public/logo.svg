@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
+  <title>Paroisses de France</title>
+  <desc>Logo stylisé représentant une église moderne</desc>
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#153969" />
+      <stop offset="100%" stop-color="#718bab" />
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="#f8fafc" />
+  <path d="M60 25l18 12v18h12v42H30V55h12V37z" fill="url(#gradient)" />
+  <circle cx="60" cy="72" r="10" fill="#ffffff" opacity="0.85" />
+  <rect x="55" y="45" width="10" height="12" fill="#ffffff" opacity="0.9" />
+</svg>
